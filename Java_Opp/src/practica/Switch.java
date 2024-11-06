@@ -9,7 +9,7 @@ public class Switch {
 	public static void main(String []args) {
 		String day = "Monday";
 		
-		int count = 3;
+		int count = 1;
 		
 		int value;
 		
@@ -24,6 +24,8 @@ public class Switch {
 			
 			
 		}
+		
+		
 		//switch count 
 		switch(count) {
 			case 3:
@@ -37,9 +39,41 @@ public class Switch {
 				break;
 			default:
 				value = 0;
+				
+				//Не забывайте завершать логический блок каждой ветки соответствующего конкретному значению (блок case) вызовом break.
 		}
 					
 		System.out.println(value);
+		
+		
+		
+		//3 primer
+		
+		int cou = 1;
+		int val = switch(cou) {
+		case 1 -> 10;
+		case 2 -> 20;
+		default -> 0;
+		
+		}
+		
+		System.out.println(val);
+		
+		
+		
+		//4 primer
+		// yield на этом версие не работает yield == return 
+		switch(count) {
+			case 1:
+				yield 12;
+			case 2:
+				yield 13;
+			default:
+				yield 0;
+			};
+		
+		System.out.println(value);
+		
 		
 	}
 
